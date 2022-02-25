@@ -1,0 +1,66 @@
+============================================
+DOCKER
+
+// Containerizing the Platform Service
+cd C:\Users\fanis\source\repos\DotNET6MicroservicesYT\PlatformService
+docker build -t faniskar/platformservice .
+
+docker run -p 8085:80 -d faniskar/platformservice
+
+// showing the running containers
+docker ps
+
+// stop the container
+docker stop <container id>
+
+// restart the same container
+docker start <container id>
+
+// Pushing to Docker Hub
+docker push faniskar/platformservice
+
+============================================
+
+K8S
+
+This folder contains deployment files.
+
+1) Create the K8S\platforms-depl.yaml (don't use tabs. only double-spaces.)
+
+cd C:\Users\fanis\source\repos\DotNET6MicroservicesYT\K8S
+
+// to make sure that k8s is running.
+kubectl version
+
+// create the platforms deployment
+kubectl apply -f platforms-depl.yaml
+
+kubectl get deployments
+
+// delete depl
+kubectl delete deployment platforms-depl
+
+kubectl get pods
+
+// In Docker Desktop, we see 2 containers 
+(
+1. k8s_POD_platforms-depl-79... <-- the pod
+2. k8s_platformsservice_platforms-depl-79.. <- the actual container
+)
+
+if we delete the k8s_platformsservice_platforms-depl-79 container
+it will start again (that's the whole point of K8S).
+
+2) Create the "Node Port" (external port to access the platform service)
+K8S\platforms-np-srv.yaml
+
+// create the node port
+kubectl apply -f platforms-np-srv.yaml
+
+// to make sure it's created
+kubectl get services
+
+// To access the service externally PORT: 80:30623/TCP (from kubectl get services)
+
+// Now we can access the Platform Service through K8S
+// http://localhost:30623/api/platforms/ 
