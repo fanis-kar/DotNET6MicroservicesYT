@@ -5,16 +5,24 @@ VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlatformService", "PlatformService\PlatformService.csproj", "{98A82386-E705-43F8-9790-500A9AE88223}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{61B6D9BD-4CA3-42AC-AFB0-56091C67E877}"
-	ProjectSection(SolutionItems) = preProject
-		notes.txt = notes.txt
-		yt-progress.txt = yt-progress.txt
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{F8DDE5F2-1D9C-4E4F-8800-336D592D992A}"
 	ProjectSection(SolutionItems) = preProject
 		K8S\platforms-depl.yaml = K8S\platforms-depl.yaml
 		K8S\platforms-np-srv.yaml = K8S\platforms-np-srv.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{547144CE-00BD-468F-99B4-4E21C7F4C7C8}"
+	ProjectSection(SolutionItems) = preProject
+		notes\notes.txt = notes\notes.txt
+		notes\yt-progress.txt = notes\yt-progress.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "architecture", "architecture", "{E5AC7BB4-930E-491C-B8A3-18606F111390}"
+	ProjectSection(SolutionItems) = preProject
+		notes\architecture\command_service_architecture.jpg = notes\architecture\command_service_architecture.jpg
+		notes\architecture\kubernetes_architecture.jpg = notes\architecture\kubernetes_architecture.jpg
+		notes\architecture\platform_service_architecture.jpg = notes\architecture\platform_service_architecture.jpg
+		notes\architecture\solution_architecture.jpg = notes\architecture\solution_architecture.jpg
 	EndProjectSection
 EndProject
 Global
@@ -30,6 +38,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5AC7BB4-930E-491C-B8A3-18606F111390} = {547144CE-00BD-468F-99B4-4E21C7F4C7C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71AC3C88-EAD5-4598-A951-CD5A7D1B6A58}
