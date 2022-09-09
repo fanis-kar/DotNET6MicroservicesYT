@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "architecture", "architectur
 		notes\architecture\solution_architecture.jpg = notes\architecture\solution_architecture.jpg
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandsService", "CommandsService\CommandsService.csproj", "{1B439786-4B73-4E0F-9D23-082E8774175E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{98A82386-E705-43F8-9790-500A9AE88223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A82386-E705-43F8-9790-500A9AE88223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A82386-E705-43F8-9790-500A9AE88223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B439786-4B73-4E0F-9D23-082E8774175E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B439786-4B73-4E0F-9D23-082E8774175E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B439786-4B73-4E0F-9D23-082E8774175E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B439786-4B73-4E0F-9D23-082E8774175E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
