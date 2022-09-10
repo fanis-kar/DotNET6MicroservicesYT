@@ -19,6 +19,18 @@ docker start <container id>
 // Pushing to Docker Hub
 docker push faniskar/platformservice
 
+// *****************
+
+// Containerizing the Commands Service
+cd C:\Users\fanis\source\repos\DotNET6MicroservicesYT\CommandsService
+docker build -t faniskar/commandsservice .
+
+docker run -p 8086:80 -d faniskar/commandsservice
+
+// Pushing to Docker Hub
+docker push faniskar/commandsservice
+
+
 ============================================
 
 K8S
@@ -35,7 +47,6 @@ kubectl version
 // create the platforms deployment
 kubectl apply -f platforms-depl.yaml
 
-kubectl get deployments
 
 // delete depl
 kubectl delete deployment platforms-depl
@@ -64,3 +75,29 @@ kubectl get services
 
 // Now we can access the Platform Service through K8S
 // http://localhost:30623/api/platforms/ 
+
+// ***************************
+
+// quick check up
+cd C:\Users\fanis\source\repos\DotNET6MicroservicesYT\K8S
+kubectl get deployments
+kubectl get pods
+kubectl get services
+
+// apply the platforms-depl.yaml again
+kubectl apply -f platforms-depl.yaml
+
+// restart the platform image
+kubectl rollout restart deployment platforms-depl
+
+// ***************************
+// Ingress nginx
+https://kubernetes.github.io/ingress-nginx/deploy/#docker-desktop
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/deploy.yaml
+
+kubectl get namespace
+kubectl get pods --namespace=ingress-nginx
+
+// apply the ingress-srv.yaml
+kubectl apply -f ingress-srv.yaml
