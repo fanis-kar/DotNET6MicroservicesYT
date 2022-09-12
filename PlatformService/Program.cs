@@ -40,14 +40,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PlatformService v1"));
 }
 
 app.UseAuthorization();
 
 app.MapControllers();
 
-PrepDb.PrepPopulation(app, app.Environment.IsProduction());
+PrepDb.PrepPopulation(app, builder.Environment.IsProduction());
 
 app.Run();
 

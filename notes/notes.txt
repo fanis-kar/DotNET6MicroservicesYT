@@ -113,8 +113,10 @@ kubectl get pvc
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"
 
 kubectl apply -f mssql-plat-depl.yaml
+kubectl rollout restart deployment mssql-plat-depl
 
 // Connect to sql server with SSMS
+// SOS: we should have only one SQLSERVER service running MSSQLSERVER OR SQLEXPRESS (in this project SQLEXPRESS)
 SERVER: localhost,1433
 USERNAME: sa
 PASSWORD: pa55w0rd!
