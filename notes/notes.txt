@@ -121,6 +121,11 @@ SERVER: localhost,1433
 USERNAME: sa
 PASSWORD: pa55w0rd!
 
+// apply the rabbitmq-depl.yaml
+kubectl apply -f rabbitmq-depl.yaml
+
+// now we can access RabbitMQ through http://localhost:15672/ (user: guest / password: guest)
+
 ============================================
 
 Entity Framework migrations

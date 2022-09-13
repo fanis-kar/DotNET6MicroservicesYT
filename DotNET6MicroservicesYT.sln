@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{F8DDE5F2-1D9
 		K8S\mssql-plat-depl.yaml = K8S\mssql-plat-depl.yaml
 		K8S\platforms-depl.yaml = K8S\platforms-depl.yaml
 		K8S\platforms-np-srv.yaml = K8S\platforms-np-srv.yaml
+		K8S\rabbitmq-depl.yaml = K8S\rabbitmq-depl.yaml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{547144CE-00BD-468F-99B4-4E21C7F4C7C8}"
