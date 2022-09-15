@@ -32,6 +32,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "architecture", "architectur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandsService", "CommandsService\CommandsService.csproj", "{1B439786-4B73-4E0F-9D23-082E8774175E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{34A935E0-CA34-453A-B4F3-1C649AEF63D2}"
+	ProjectSection(SolutionItems) = preProject
+		notes\postman\Docker Env.postman_collection.json = notes\postman\Docker Env.postman_collection.json
+		notes\postman\K8S Env.postman_collection.json = notes\postman\K8S Env.postman_collection.json
+		notes\postman\Local Dev.postman_collection.json = notes\postman\Local Dev.postman_collection.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +59,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E5AC7BB4-930E-491C-B8A3-18606F111390} = {547144CE-00BD-468F-99B4-4E21C7F4C7C8}
+		{34A935E0-CA34-453A-B4F3-1C649AEF63D2} = {547144CE-00BD-468F-99B4-4E21C7F4C7C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71AC3C88-EAD5-4598-A951-CD5A7D1B6A58}

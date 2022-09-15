@@ -1,3 +1,5 @@
+https://planetary-crater-174088.postman.co/workspace/c0506b5b-2f40-49a4-b13d-58eff957a379
+
 ============================================
 DOCKER
 
@@ -89,6 +91,7 @@ kubectl apply -f platforms-depl.yaml
 
 // restart the platform image
 kubectl rollout restart deployment platforms-depl
+kubectl rollout restart deployment commands-depl
 
 // ***************************
 // Ingress nginx
@@ -133,3 +136,15 @@ Entity Framework migrations
 enable-migrations
 
 add-migration initialmigration
+
+============================================
+
+gRPC Section
+
+We will use gRPC when the Commands Service start to reach out PLatforms Service and retrieve all the platforms. 
+
+In this section, Command Service is the client and the Platform Service is the server.
+
+After we create the proto file and build the project, we will see 
+the c# generated classes here: C:\Users\fanis\source\repos\DotNET6MicroservicesYT\PlatformService\obj\Debug\net6.0\Protos
+

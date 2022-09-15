@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "b65e5f3a-b30b-4aeb-9fe8-33b57f05f8d5",
+		"name": "Docker Env",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11274793"
+	},
+	"item": [
+		{
+			"name": "Platform Service",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/api/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"api",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "1b45aa5f-1538-44d3-8054-467a11c6a6ea",
+		"name": "Local Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11274793"
+	},
+	"item": [
+		{
+			"name": "Platform Service",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5063/api/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5063",
+							"path": [
+								"api",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platform By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5063/api/platforms/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5063",
+							"path": [
+								"api",
+								"platforms",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Docker\",\r\n    \"publisher\": \"Docker\",\r\n    \"cost\": \"Free\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5063/api/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5063",
+							"path": [
+								"api",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Commands Service",
+			"item": [
+				{
+					"name": "Test Inbound Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5249/api/c/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5249",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Platforms",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Commands for Platform",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Command for Platform",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Command for Platform",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
